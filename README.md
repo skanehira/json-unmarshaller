@@ -6,8 +6,9 @@ A wrapper that makes it easy to understand the location of json's parse error.
 package main
 
 import (
-    "fmt"
-    json "skanehira/json-unmarshaller"
+	"fmt"
+
+	json "github.com/skanehira/json-unmarshaller"
 )
 
 func main() {
@@ -35,9 +36,9 @@ func main() {
 	b := []byte(data)
 
 	if err := json.Unmarshal(b, &s); err != nil {
-        panic(err)
+		panic(err)
 	}
 
-    fmt.Printf("%#+v", s)
+	fmt.Printf("%#+v", s)
 }
 ```
